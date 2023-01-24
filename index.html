@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p8</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            row-gap: 0.5em;
+            display:grid;
+            grid-template-columns: repeat(6,auto);
+            grid-template-rows: 12.5% 25% 50% 12.5%;
+        
+        }
+        nav{
+            grid-column-start: 1;
+            grid-column-end: 7;
+            background-color: purple;
+        }
+
+        header{
+            grid-column-start: 1;
+            grid-column-end: 7;
+            background-color: rgb(212, 228, 133);
+        }
+        main{
+            grid-column-start: 1;
+            grid-column-end: 5;            
+            background-color: aqua;
+        }
+        aside{
+            grid-column-start: 5;
+            grid-column-end: 7;           
+            background-color: rgb(232, 201, 96);
+        }
+        footer{
+            grid-column-start: 1;
+            grid-column-end: 7;            
+            background-color: rgb(212, 228, 133);
+        }
+        @media only screen and (max-width: 832px){
+            .container{
+                grid-template-columns: repeat(4, 25%);
+                grid-template-rows: 6.66% 26.64% 33.3% 13,32% 19.90%;
+             
+            }
+            main{
+                background-color:palegoldenrod
+            }
+
+            
+        }
+        @media only screen and ( max-width: 500px){
+            .container{
+            grid-template-columns:auto auto ;
+            grid-template-rows: 10% 30% 40% 10% 20%;
+        
+            } 
+
+        }
+            
+        
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class='container'>
+            <nav>
+                <p>menu nav</p>
+            </nav>
+            <header>
+                <p>header</p>
+            </header>
+            <main>
+                <p>main content</p>
+            </main>
+            <aside>
+                <p>aside</p>
+            </aside>
+            <footer>
+            <p>footer</p>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
